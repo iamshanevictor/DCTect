@@ -11,6 +11,15 @@ from pathlib import Path
 from pypresence import Presence
 from typing import Optional, Dict, Any
 
+# Try to auto-load a local .env file (created by setup.py) if python-dotenv is installed.
+try:
+    from dotenv import load_dotenv
+    # load .env in the project root (current working directory)
+    load_dotenv()
+except Exception:
+    # python-dotenv not installed or load failed; it's optional.
+    pass
+
 
 class DiscordStatusManager:
     """Manages Discord Rich Presence and status updates."""

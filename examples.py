@@ -10,6 +10,13 @@ from typing import Dict, Any
 
 from discord_status import DiscordStatusManager
 
+# Try to auto-load a local .env file so DISCORD_CLIENT_ID written by setup.py is available
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except Exception:
+    pass
+
 
 # Path to configuration file (optional)
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), "discord_config.json")
