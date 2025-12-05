@@ -1,0 +1,10 @@
+{
+  "state": "Shabu",
+  "details": "Shabu",
+  "large_image": "discord",
+  "large_text": "SHABU",
+  "small_image": null,
+  "small_text": null,
+  "update_interval": 5,
+  "auto_start": true
+}
